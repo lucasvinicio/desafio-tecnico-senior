@@ -1,0 +1,17 @@
+**/node_modules/
+./node_modules
+node_modules
+./app/node_modules
+./app/node_modules/
+./app/dist
+**/node_modules
+**/.idea
+**/dist
+.git
+npm-debug.log
+.coverage
+.coverage.*
+.aws
+.dockerignore
+dist
+.vscode
