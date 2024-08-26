@@ -1,9 +1,5 @@
 
-networks:
-  default:
-
 services:
-  
   mysql-db:
     container_name: mysql-db
     image: mysql:8.0.39
@@ -13,49 +9,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
     ports:
-
       - $MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT
-      #- 3306:3306
     expose:
       - 3306
     volumes:
-      #- ./mysql/mysql-volume:/var/lib/mysql
-      #- ./mysql/mysql-initdb.d:/docker-entrypoint-initdb.d
-      - ./mysql-test/mysql-volume:/var/lib/mysql
-      - ./mysql/mysql-initdb.d:/docker-entrypoint-initdb.d
-    networks:
-      - default
-
-  nestjs-app:
-    container_name: nestjs-app
-    depends_on: 
-      - mysql-db
-    build:
-      context: .
-      dockerfile: Dockerfile
-
-    restart: unless-stopped
-    env_file: .env
-    
-    
-    #environment:
-    #  - DB_HOST=$MYSQL_HOST
-    #  - DB_USER=$MYSQL_ROOT_USER
-    #  - DB_PASSWORD=$MYSQL_ROOT_PASSWORD
-    #  - DB_DATABASE=$MYSQL_DATABASE
-    #  - DB_PORT=$MYSQL_DOCKER_PORT
-    ports:
-      - 3001:3000
-    volumes:
-      - ./app:/usr/src/app
-      #- ./src:/usr/src/app/src
-      #- ./test:/usr/src/app/test
-      #- ./env:/usr/src/app/.env
-      #- ./eslintrc.js:/usr/src/app/.eslintrc.js
-      #- ./prettierrc:/usr/src/app/.prettierrc
-      #- ./nest-cli.json:/usr/src/app/nest-cli.json
-      #- ./package.json:/usr/src/app/package.json
-      #- ./tsconfig.json:/usr/src/app/tsconfig.json
-      #- ./tsconfig.build.json:/usr/src/app/tsconfig.build.json
-    networks:
-      - default
+      - ./mysql/mysql-volume:/var/lib/mysql
+      
