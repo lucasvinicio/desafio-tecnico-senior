@@ -1,0 +1,11 @@
+**/.idea
+**/dist
+.git
+npm-debug.log
+.coverage
+.coverage.*
+.aws
+.dockerignore
+dist
+.vscode
+Dockerfile

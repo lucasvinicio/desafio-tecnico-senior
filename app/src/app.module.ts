@@ -15,16 +15,16 @@ import { GruposModule } from './grupos/grupos.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env',
+      envFilePath: '../.env',
       isGlobal: true
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: process.env.MYSQL_HOST,
+      host: 'localhost',
       port: +process.env.MYSQL_LOCAL_PORT,
       username: process.env.MYSQL_ROOT_USER,
       password: process.env.MYSQL_ROOT_PASSWORD,
-      database: process.env.MYSQL_DATABASE,
+      database: 'pomar',
       entities: [EspecieEntity, Arvore, Grupo, Colheita],
       synchronize: false,
       autoLoadEntities: true,
