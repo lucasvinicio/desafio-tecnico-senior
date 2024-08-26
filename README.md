@@ -11,7 +11,7 @@ Este é um projeto desenvolvido para o desafio técnico Pomar, utilizando NestJS
 
 ## Modelo Entidade Relacional
 
-![Modelo Entidade Relacional](https://imgur.com/a/6t4BGGs)
+![Modelo Entidade Relacional](https://i.imgur.com/76ocWlh.png)
 
 ## Requisitos
 
