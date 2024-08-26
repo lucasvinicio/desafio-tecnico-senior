@@ -25,7 +25,7 @@ Siga as etapas abaixo para instalar e configurar o projeto:
 
 1. Clone o repositório:
    ```bash
-   git clone <URL_DO_REPOSITÓRIO>
+   git clone https://github.com/lucasvinicio/desafio-tecnico-senior.git
    ```
 
 2. Crie um arquivo `.env` na raiz do projeto com as seguintes propriedades, preenchendo com os valores apropriados:
