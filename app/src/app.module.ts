@@ -15,7 +15,7 @@ import { GruposModule } from './grupos/grupos.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env',
+      envFilePath: '../.env',
       isGlobal: true
     }),
     TypeOrmModule.forRoot({
